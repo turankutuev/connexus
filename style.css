@@ -1,0 +1,136 @@
+body {
+    background-color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 600px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.image {
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 350px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?cs=srgb&dl=pexels-pixabay-247322.jpg&fm=jpg");
+}
+
+.content {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 45px 45px 0 0;
+    background-color: aliceblue;
+    width: 100%;
+    margin-top: 300px;
+
+    h1 {
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        margin-top: 10px;
+    }
+
+}
+
+.btn-1 {
+    width: fit-content;
+    padding: 16px 36px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(to right, #009760, #01b39b);
+    cursor: pointer;
+    z-index: 1;
+    font-size: medium;
+}
+
+.btn-1::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    border-radius: 24px;
+    background-color: white;
+    z-index: -1;
+}
+
+
+.btn-2 {
+    width: fit-content;
+    padding: 16px 42px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: darkslateblue;
+    color: white;
+    font-size: medium;
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 0 16px;
+    column-gap: 8px;
+    row-gap: 8px;
+
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 12px;
+    /* background-color: red; */
+    border: 1px #009760 solid;
+    color: darkslateblue;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.link-icon {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background-color: green;
+}
+
+.link-icon::after {
+    content: '';
+    height: 80%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 5;
+    background-color: #b8b8b8;
+}
+
+.link-title {
+    padding: 2px 24px;
+    font-weight: 600;
+}
